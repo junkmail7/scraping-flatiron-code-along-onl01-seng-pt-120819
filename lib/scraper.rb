@@ -4,7 +4,7 @@ require 'open-uri'
 require_relative './course.rb'
 
 class Scraper
-  
+
   def print_courses
     self.make_courses
     Course.all.each do |course|
@@ -32,8 +32,5 @@ class Scraper
     course.description = post.css("p").text
   end
 end
-  
+
 end
-
-
-
